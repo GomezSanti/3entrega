@@ -9,7 +9,7 @@ def agregar_perro(request):
         form = forms.PerroForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("home/index.html")
+            return redirect("home:index")
     else:
         form = forms.PerroForm()
         context={"form": form}
