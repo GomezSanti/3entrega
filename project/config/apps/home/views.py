@@ -7,7 +7,7 @@ def index(request):
 def agregar_perro(request):
     if request.method == "POST":
         form = forms.PerroForm(request.POST)
-        if forms.is_valid():
+        if form.is_valid():
             form.save()
             return redirect("home/index.html")
     else:
