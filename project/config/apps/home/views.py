@@ -1,14 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from . import forms
 
 def index(request):
     return render(request, "home/index.html")
 
 def agregar_perro(request):
-    form = forms.PerroForm(request.POST)
-    context={"form": form}
-    return render(request, "home/agregar_perro.html", context)
-
+    if request.method == "POST":
+        form = forms.PerroForm(request.POST)
+        if forms.is_valid():
+            form.save()
+            return redirect("home/index.html")
+    else:
+        form = forms.PerroForm()
+        context={"form": form}
+        return redirect( request, "home/agregar_perro.html", context)
 
 def agregar_gato(request):
     form = forms.GatoForm(request.POST)
