@@ -17,12 +17,24 @@ def agregar_perro(request):
 
 
 def agregar_gato(request):
-    form = forms.GatoForm(request.POST)
+    if request.method == "POST":
+        form = forms.GatoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("home:index")
+    else:
+        form = forms.GatoForm()
     context={"form": form}
     return render(request, "home/agregar_gato.html", context)
 
 
 def agregar_exotico(request):
-    form = forms.ExoticoForm(request.POST)
+    if request.method == "POST":
+        form = forms.ExoticoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("home:index")
+    else:
+        form = forms.ExoticoForm()
     context={"form": form}
-    return render(request, "home/agregar_Exotico.html", context)
+    return render(request, "home/agregar_exotico.html", context)
