@@ -13,7 +13,8 @@ def agregar_perro(request):
     else:
         form = forms.PerroForm()
     context={"form": form}
-    return redirect( request, "home/agregar_perro.html", context)
+    return render(request, "home/agregar_perro.html", context)
+
 
 def agregar_gato(request):
     form = forms.GatoForm(request.POST)
