@@ -1,0 +1,8 @@
+En este proyecto mi idea es armar un web de un hotel/guardería para mascotas.
+Fui armando todo el proyecto desde cero con la ayuda de la clase 21 y el after clase.
+Mi idea es en la web hayan tres botones Perro(/agregar_perro/) Gato (/agregar_gato/) Exotico(/agregar_exotico/)
+al ingresar a estos apartados de la web se va a abrir el formulario de cada especie para que el cliente pueda agregar los datos de su mascota a nuestra base de datos y con ello dejar registrado.
+Luego de ingresar los datos del formulario, el mismo queda cargado en nuestra base y nos redirecciona automaticamente a la pagina principal de la App.
+
+Tengo pendiente de mejorar toda la parte visual de la web pero lo que mas me estaba trancando que era la funcionalidad de los formularios lo pude corregir al momento.
+Muchas gracias por la ayuda!
