@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petopia</title>
+    <style>
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .header-button {
+            padding: 10px 20px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <h1>Petopia</h1>
+
+    <div class="header-buttons">
+        <a class="header-button" href="{% url 'agregar_perro' %}">Agregar Perro</a>
+        <a class="header-button" href="{% url 'agregar_gato' %}">Agregar Gato</a>
+        <a class="header-button" href="{% url 'agregar_exotico' %}">Agregar Exótico</a>
+    </div>
 
     {% block contenido %}
         
