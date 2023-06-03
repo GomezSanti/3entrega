@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
 from . import forms
+from django.contrib import messages
+
 
 def index(request):
     return render(request, "home/index.html")
@@ -8,6 +10,7 @@ def agregar_perro(request):
     if request.method == "POST":
         form = forms.PerroForm(request.POST)
         if form.is_valid():
+            messages.success(request, 'Ya contamos con los datos de nuestro amiguite, ¡pronto te llamaremos para una entrevista!')
             form.save()
             return redirect("home:index")
     else:
