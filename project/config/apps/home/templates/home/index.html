@@ -2,6 +2,12 @@
 
 {% block contenido %}
 
-<h2>Menú Principal</h2>
-    
+
+<div class="header-buttons">
+<a href="{% url 'home:agregar_perro' %}"> Perros</a>
+<a href="{% url 'home:agregar_gato' %}"> Gatos </a>
+<a href="{% url 'home:agregar_exotico' %}"> Exóticos</a>
+</div>  
+
+
 {% endblock contenido %}

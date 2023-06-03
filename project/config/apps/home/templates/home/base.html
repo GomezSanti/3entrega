@@ -4,33 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petopia</title>
     <style>
-        .header-buttons {
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hotel-title {
+            text-align: center;
+            font-family: 'Impact', sans-serif;
+            font-size: 60px;
+            margin-top: 50px;
+}
+
+        .hotel-letter {
+            display: inline-block;
+            font-family: 'Brush Script MT', cursive;
+            color: #f8bdc8;
+            letter-spacing: 20px;
+            transform: scaleY(2);
+            transform-origin: bottom;
+}
+
+        
+        .container {
             display: flex;
-            gap: 10px;
+            flex-direction: column;
+            min-height: 100vh;
+           
         }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .footer {
+            background-color: #f8bdc8; 
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+        
+        .footer-text {
+            color: #888;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .link-container {
+            margin-top: 40px;
+}
+        
         .header-button {
-            padding: 10px 20px;
-            background-color: #eee;
-            border: 1px solid #ccc;
-            text-decoration: none;
-            color: #333;
+            margin-top: 20px;
         }
+
+
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f8bdc8;
+            color: #080707;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+}
+
+        .home-link:hover {
+            background-color: #e599a7;
+        }
+
     </style>
 </head>
 <body>
-</head>
-<body>
-    <h1>Petopia</h1>
-
-     
-
-    {% block contenido %}
+    <div class="container">
         
-    {% endblock contenido %}
+        <h1 class="hotel-title">
+            <span class="hotel-letter">P</span>
+            <span class="hotel-letter">e</span>
+            <span class="hotel-letter">t</span>
+            <span class="hotel-letter">o</span>
+            <span class="hotel-letter">p</span>
+            <span class="hotel-letter">i</span>
+            <span class="hotel-letter">a</span>
+        </h1>
 
-    {% include 'home/footer.html' %} 
-    
-</body>
-</html>
+        <div class="content">
+            {% block contenido %}
+                
+            {% endblock contenido %}
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2023 Petopia - Hotel/Guardería para Mascotas</p>

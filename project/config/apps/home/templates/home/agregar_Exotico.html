@@ -1,13 +1,17 @@
 {% extends 'home/base.html' %}
 
-{% block contenido  %}
+{% block contenido %}
     
-<h1> Agregar Exotico</h1>
 
-<form action = "" method="post">
+
+<form action="" method="post">
     {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Agregar Exotico">
+    {{ form.as_p }}
+    <div class="button-container">
+        <button type="submit" class="header-button">Guardar</button>
+    </div>
 </form>
 
-{% endblock contenido  %}
+<a href="{% url 'home:index' %}" class="home-link">Volver a la página de inicio</a>
+
+{% endblock contenido %}

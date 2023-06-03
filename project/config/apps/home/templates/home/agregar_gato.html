@@ -2,12 +2,14 @@
 
 {% block contenido  %}
     
-<h1> Agregar Gato</h1>
+
 
 <form action = "" method="post">
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Agregar Gato">
+    <button type="submit" class="header-button">Guardar</button>
 </form>
+
+<a href="{% url 'home:index' %}" class="home-link">Volver a la página de inicio</a>
 
 {% endblock contenido  %}
