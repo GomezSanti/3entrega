@@ -2,11 +2,12 @@ from django.shortcuts import render,redirect
 from . import forms
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import views as auth_views
 
 
 def index(request):
-    return render(request, "home/index.html")
+    return render(request, "home/index.html", {"user": request.user})
 
 
 #Formulario de perros
@@ -89,3 +90,6 @@ def registro(request):
 
     return render (request,"home/registro.html", {"form":form})
 
+def logout_request(request):
+    logout(request)
+    return render(request, "home/index.html", {"mensaje":"La sesión ha finalizado"})
