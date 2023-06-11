@@ -1,18 +1,13 @@
 {% extends 'home/base.html' %}
 
-{% block contenido  %}
-    
-
-
-<form action = "" method="post">
+{% block contenido %}
+<div style="margin-top: 20px;">
+  <form action="" method="post">
     {% csrf_token %}
-    {{form.as_p}}
+    {{ form.as_p }}
     <button type="submit" class="header-button">Guardar</button>
-</form>
+  </form>
 
-
-    <a href="{% url 'home:index' %}" class="home-link">Volver a la página de inicio</a>
-
-{% endblock contenido  %}
-
-
+  <a href="{% url 'home:index' %}" class="home-link">Volver a la página de inicio</a>
+</div>
+{% endblock contenido %}
