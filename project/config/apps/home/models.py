@@ -27,3 +27,4 @@ class Exotico(models.Model):
 
     def __str__(self):
         return self.raza  
+    

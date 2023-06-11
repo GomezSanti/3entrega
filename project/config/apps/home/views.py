@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth import views as auth_views
+from django.db import models
+
 
 
 def index(request):
@@ -93,3 +95,8 @@ def registro(request):
 def logout_request(request):
     logout(request)
     return render(request, "home/index.html", {"mensaje":"La sesión ha finalizado"})
+
+
+def about_view(request):
+    return render(request, "home/about.html")
+

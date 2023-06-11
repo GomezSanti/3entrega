@@ -109,6 +109,7 @@
                 <li><a href="{% url 'home:agregar_perro' %}"> Perros</a></li>
                 <li><a href="{% url 'home:agregar_gato' %}"> Gatos </a></li>
                 <li><a href="{% url 'home:agregar_exotico' %}"> Exóticos</a></li>
+                <li><a href="{% url 'home:about' %}"> Acerca de mí</a></li>
                 {% if user.is_authenticated %}
                     <a href="{% url 'home:logout' %}" class="btn btn-primary">Cerrar sesión</a>
                     <p>Bienvenido, {{ request.user.username }}</p>
