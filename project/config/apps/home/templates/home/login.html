@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% extends 'home/base.html' %}
+
+{% block contenido %}
 <body>
         <form action= "" method= "POST">
             { {% csrf_token %}}
             {{ form.as_p}}
             <button type="submit">Iniciar Sesión</button>
-            <div class="header-buttons"></div><p>Si no tiene usuario,<a href="{% url "home:registro" %}" class="btn btn-primary">Regístrese aquí</a></p>
+            <div class="home-buttons"></div><p>Si no tiene usuario,<a href="{% url "home:registro" %}" class="home-link">Regístrese aquí</a></p>
 
         </form>
 
@@ -19,3 +14,6 @@
     
 </body>
 </html>
+
+
+{% endblock contenido %}
