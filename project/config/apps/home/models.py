@@ -26,5 +26,5 @@ class Exotico(models.Model):
     peso = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
-        return self.raza  
+        return self.especie
     

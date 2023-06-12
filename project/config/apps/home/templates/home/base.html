@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ES">
+<html lang="ES" class="full-height">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +9,15 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            background-color: #cecacaa1;
         }
 
         .navbar {
-            background-color: #f8bdc8;
+            background-color: #d88f9c;
             padding: 10px;
         }
-        
-             .navbar ul {
+
+        .navbar ul {
             list-style: none;
             margin: 0;
             display: flex;
@@ -25,6 +26,11 @@
 
         .navbar li {
             margin-right: 10px;
+        }
+
+        .image-container {
+            margin-top: -500px;
+            margin-left: 565px
         }
 
         .navbar a {
@@ -36,13 +42,13 @@
             text-align: center;
             font-family: 'Impact', sans-serif;
             font-size: 60px;
-            margin-top: 80px; /* Modifica este valor según tu preferencia */
+            margin-top: 80px;
         }
 
         .hotel-letter {
             display: inline-block;
             font-family: 'Brush Script MT', cursive;
-            color: #f8bdc8;
+            color: #d88f9c;
             letter-spacing: 20px;
             transform: scaleY(2);
             transform-origin: bottom;
@@ -60,7 +66,7 @@
         }
 
         .footer {
-            background-color: #f8bdc8; 
+            background-color: #d88f9c; 
             padding: 20px;
             text-align: center;
             margin-top: auto;
@@ -84,11 +90,14 @@
             margin-top: 20px;
         }
 
+
+
+
         .home-link {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #f8bdc8;
+            background-color: #d88f9c;
             color: #080707;
             text-decoration: none;
             border-radius: 5px;
@@ -96,14 +105,30 @@
         }
 
         .home-link:hover {
-            background-color: #e599a7;
+            background-color: #d88f9c;
+        }
+
+        html.full-height,
+        body.full-height {
+            height: 100%;
+        }
+
+        .container.full-height {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content.full-height {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
         }
 
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="navbar">
+<body class="container full-height">
+    <div class="navbar">
             <ul>
                 <li><a href="{% url 'home:index' %}"> Inicio</a></li>
                 <li><a href="{% url 'home:agregar_perro' %}"> Perros</a></li>
