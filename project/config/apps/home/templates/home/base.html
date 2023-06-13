@@ -15,6 +15,7 @@
         .navbar {
             background-color: #d88f9c;
             padding: 10px;
+            margin-bottom: -185px;
         }
 
         .navbar ul {
@@ -28,16 +29,16 @@
             margin-right: 10px;
         }
 
-        .image-container {
-            margin-top: -500px;
-            margin-left: 565px
-        }
-
+       
         .navbar a {
             text-decoration: none;
             color: #080707;
         }
 
+        .image-container {
+            text-align: center;
+            margin-bottom: 100px;
+        }
         .hotel-title {
             text-align: center;
             font-family: 'Impact', sans-serif;
@@ -133,8 +134,8 @@
                 <li><a href="{% url 'home:agregar_exotico' %}"> Exóticos</a></li>
                 <li><a href="{% url 'home:about' %}"> Acerca de mí</a></li>
                 {% if user.is_authenticated %}
-                    <a href="{% url 'home:logout' %}" class="btn btn-primary">Cerrar sesión</a>
-                    <p>Bienvenido, {{ request.user.username }}</p>
+                    <li><a href="{% url 'home:logout' %}" class="btn btn-primary">Cerrar sesión</a><li>
+                    <span style="margin-bottom: 10px;"><strong style="font-weight: 800;">Bienvenido, {{ request.user.username }}</strong></span>
                 {% else %}
                     <a href="{% url 'home:login' %}" class="btn btn-primary">Iniciar sesión</a>
                 {% endif %}
@@ -142,13 +143,7 @@
         </div>
 
         <h1 class="hotel-title">
-            <span class="hotel-letter">P</span>
-            <span class="hotel-letter">e</span>
-            <span class="hotel-letter">t</span>
-            <span class="hotel-letter">o</span>
-            <span class="hotel-letter">p</span>
-            <span class="hotel-letter">i</span>
-            <span class="hotel-letter">a</span>
+           
         </h1>
 
         <div class="content">
