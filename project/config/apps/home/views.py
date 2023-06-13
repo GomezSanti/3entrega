@@ -18,36 +18,38 @@ def agregar_perro(request):
     if request.method == "POST":
         form = forms.PerroForm(request.POST)
         if form.is_valid():
-            messages.success(request, 'Ya contamos con los datos de nuestro amiguite, ¡pronto te llamaremos para una entrevista!')
             form.save()
+            messages.success(request, 'Ya contamos con los datos de nuestro amiguit@. ¡Pronto te llamaremos para una entrevista!')
             return redirect("home:index")
     else:
         form = forms.PerroForm()
-    context={"form": form}
+    context = {"form": form}
     return render(request, "home/agregar_perro.html", context)
 
-#Formularios de Gatos
+# Formulario para gatos
 def agregar_gato(request):
     if request.method == "POST":
         form = forms.GatoForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Ya contamos con los datos de nuestro amiguit@. ¡Pronto te llamaremos para una entrevista!')
             return redirect("home:index")
     else:
         form = forms.GatoForm()
-    context={"form": form}
+    context = {"form": form}
     return render(request, "home/agregar_gato.html", context)
 
-#Formularios de Animales Exóticos
+# Formulario para animales exóticos
 def agregar_exotico(request):
     if request.method == "POST":
         form = forms.ExoticoForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Ya contamos con los datos de nuestro amiguit@. ¡Pronto te llamaremos para una entrevista!')
             return redirect("home:index")
     else:
         form = forms.ExoticoForm()
-    context={"form": form}
+    context = {"form": form}
     return render(request, "home/agregar_exotico.html", context)
 
 

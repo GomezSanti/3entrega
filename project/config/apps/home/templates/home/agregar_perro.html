@@ -1,13 +1,39 @@
 {% extends 'home/base.html' %}
+{%load static %}
+
 
 {% block contenido %}
-<div style="margin-top: 20px;">
-  <form action="" method="post">
+<div style="margin-top: 20px; font-size: 20px;">
+  <h2 style="font-size: 28px;">Bienvenido a nuestro hogar</h2>
+  <p>¡Hola, amiguito peludo! ¿Buscas un lugar donde pasar días llenos de diversión y mucho amor? ¡estás en el lugar perfecto!</p>
+  <p>En nuestra guardería, nos encanta consentir a nuestros huéspedes de cuadrúpedos. Aquí encontrarás un ambiente súper acogedor, donde podrás disfrutar de juegos, paseos y miles de cariñitos.</p>
+  <p>Queremos conocerte en persona, así que te invitamos a llenar el formulario que aparece abajo. Con tus datos, podremos agendar una entrevista personalizada para entenderte mejor y conocer tus gustos y necesidades. ¡Es la mejor manera de empezar nuestra aventura juntos!</p>
+  <p>Recuerda, estamos disponibles las 24 horas, los 7 días de la semana, para atender tus necesidades perrunas. Tu comodidad y felicidad son nuestra prioridad máxima. ¡Así que no te lo pienses más y únete a nuestra gran familia canina!</p>
+  <br>
+  <br>
+  
+ 
+  <form action="" method="post" style="font-size: 20px;">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="header-button">Guardar</button>
   </form>
 
+  <br>
+
   <a href="{% url 'home:index' %}" class="home-link">Volver a la página de inicio</a>
 </div>
+
+
+<div class="image-container" style="text-align: center; margin-bottom: 10px;">
+  <img src="{% static 'Perro1.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+  <img src="{% static 'Perro2.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+  <img src="{% static 'Perro3.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+  <img src="{% static 'Perro4.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+  <img src="{% static 'Perro5.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+</div>
+
+</var>
+
+
 {% endblock contenido %}

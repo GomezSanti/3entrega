@@ -1,11 +1,24 @@
 {% extends 'home/base.html' %}
+{% load static %}
 
 {% block contenido %}
-<body>
-       <h1>Acerca de nosotros</h1>
-    <p>Información sobre los creadores de la página y el proyecto.</p>
-</body>
-</html>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="about-container">
+          <h1 class="about-title">Acerca de mí</h1>
+          <p class="about-text">¡Hola! Soy Santiago Gómez, un apasionado estudiante de Contador Público en las etapas finales de mi carrera. Aunque mi formación principal se encuentra en el campo de las finanzas, siempre he sentido un gran interés por el mundo de la tecnología y su aplicación en diversos ámbitos de la vida y el trabajo. Me entusiasma especialmente la idea de mejorar y automatizar procesos, y recientemente decidí embarcarme en el aprendizaje de Python como mi primer lenguaje de programación.</p>
+          <p class="about-text">Mi objetivo es explorar la forma en que el campo de las tecnologías de la información y el manejo de datos pueden vincularse con mi carrera profesional como contador. Con esta visión en mente, decidí desarrollar un proyecto personal: un hotel/guardería para mascotas.</p>
+          <p class="about-text">El objetivo de este proyecto es proporcionar a las personas interesadas información detallada sobre cómo funciona nuestro hotel/guardería para mascotas, así como los servicios que ofrecemos. A través de nuestra plataforma web, los usuarios podrán ingresar sus datos de contacto y solicitar una entrevista personalizada para que podamos conocer a su mascota y evaluar si nuestras instalaciones y servicios se adaptan a sus necesidades.</p>
+          <p class="about-text">He puesto especial énfasis en crear una interfaz amigable y fácil de navegar para los usuarios. Además, he implementado mensajes informativos en cada paso del proceso, para que los usuarios puedan recibir notificaciones claras y concisas sobre el estado de sus acciones. Por ejemplo, recibirán un mensaje de confirmación cuando sus datos sean cargados correctamente, cuando inicien sesión exitosamente o cuando cierren sesión de manera adecuada.</p>
+          <p class="about-text">En cuanto al diseño, siendo sincero, me resultó difícil aplicar Bootstrap, por lo que fui diseñando gradualmente cada parte de la web. Aunque estoy satisfecho con lo que he aprendido y mi progreso personal, soy consciente de que aún tengo mucho por mejorar. Agradezco enormemente las clases y el tiempo que se han tomado para revisar mi proyecto.</p>
+          <p class="about-text">¡Muchas gracias por su atención y apoyo!</p>
+        </div>
+      
+    <div class="col-md-6">
+        <img src="{% static 'S.G.png' %}" alt="Imagen" style="width: 12%; height: auto;" class="img-fluid">
 
-
+    </div>
+  </div>
+</div>
 {% endblock contenido %}

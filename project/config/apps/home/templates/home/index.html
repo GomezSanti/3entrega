@@ -17,9 +17,17 @@
 
   {% endif %}
 
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <span class="message-content">{{ message }}</span>
+    {% endfor %}
+  </ul>
+{% endif %}
+
 </div>
 </div>  
-<div class="image-container" style="text-align: center; margin-bottom: -31px;">
+<div class="image-container" style="text-align: center; margin-bottom: -0px;">
   <img src="{% static 'Web.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
 </div>
 
