@@ -5,6 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth import views as auth_views
 from django.db import models
+from .forms import UserRegisterForm
 
 
 
@@ -80,7 +81,7 @@ def login_request(request):
 def registro(request):
     if request.method =="POST":
         
-        form = UserCreationForm(request.POST)
+        form = UserRegisterForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data["username"]
             form.save()
@@ -88,7 +89,7 @@ def registro(request):
 
 
     else:
-        form = UserCreationForm()
+        form = UserRegisterForm()
 
     return render (request,"home/registro.html", {"form":form})
 
