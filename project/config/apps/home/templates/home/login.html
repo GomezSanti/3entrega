@@ -1,17 +1,42 @@
 {% extends 'home/base.html' %}
+{%load static %}
 
 {% block contenido %}
 <body>
-        <form action= "" method= "POST">
-            { {% csrf_token %}}
-            {{ form.as_p}}
-            <button type="submit">Iniciar Sesión</button>
-            <div class="home-buttons"></div><p>Si no tiene usuario,<a href="{% url "home:registro" %}" class="home-link">Regístrese aquí</a></p>
+        
+    <form action="" method="POST" style="font-size: 24px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"class="home-link";>Iniciar Sesión</button>
+        <div class="home-buttons"></div>
+        <p>Si no tiene usuario, <a href="{% url 'home:registro' %}" class="home-link">Regístrese aquí</a></p>
+    </form>
+
+            <style>
+                input[type="text"],
+                input[type="email"],
+                input[type="password"] {
+                  width: 400px;
+                  padding: 10px;
+                  margin-bottom: 10px;
+                }
+              </style>
+              
 
         </form>
 
         <a href="{% url 'home:index' %}" class="home-link">Volver a la página de inicio</a>
     
+
+        <div class="image-container" style="text-align: center; margin-bottom: 10px;">
+            <img src="{% static 'Hotel1.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+            <img src="{% static 'Hotel2.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+            <img src="{% static 'Hotel3.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+            <img src="{% static 'Hotel4.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+            <img src="{% static 'Hotel5.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
+           
+          </div>
+
 </body>
 </html>
 

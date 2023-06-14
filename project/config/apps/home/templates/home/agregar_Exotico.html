@@ -13,12 +13,20 @@
     <br>
     <br>
 
-
+ 
+    {% if user.is_authenticated %}
 <form action="" method="post" style="font-size: 20px;">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="header-button">Guardar</button>
   </form>
+
+  {% else %}
+    <p style="color: red; font-weight: bold;">Inicia sesión para poder agendar una entrevista.</p>
+    <a href="{% url 'home:login' %}" class="home-link" style="color: rgb(1, 1, 10); font-weight: bold;">Iniciar Sesión</a>
+  {% endif %}
+<br>
+
 
 <a href="{% url 'home:index' %}" class="home-link">Volver a la página de inicio</a>
 
