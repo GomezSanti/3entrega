@@ -1,8 +1,20 @@
-En este proyecto mi idea es armar un web de un hotel/guardería para mascotas.
-Fui armando todo el proyecto desde cero con la ayuda de la clase 21 y el after clase.
-Mi idea es en la web hayan tres botones Perro(/agregar_perro/) Gato (/agregar_gato/) Exotico(/agregar_exotico/)
-al ingresar a estos apartados de la web se va a abrir el formulario de cada especie para que el cliente pueda agregar los datos de su mascota a nuestra base de datos y con ello dejar registrado.
-Luego de ingresar los datos del formulario, el mismo queda cargado en nuestra base y nos redirecciona automaticamente a la pagina principal de la App.
+Buenas tardes, permítanme describir brevemente las funcionalidades de mi sitio web. Para comenzar, me gustaría mencionar que seguí el consejo de mi tutora
+y decidí desarrollar el sitio web desde cero, sin clonar ninguna parte del proyecto proporcionado en clase.
+Sinceramente, esta decisión me ayudó a practicar y mejorar significativamente mis habilidades.
 
-Tengo pendiente de mejorar toda la parte visual de la web pero lo que mas me estaba trancando que era la funcionalidad de los formularios lo pude corregir al momento.
-Muchas gracias por la ayuda!
+Mi sitio web es una guardería/hotel para mascotas que se divide en tres secciones principales para distinguir nuestras bases de datos.
+Estas categorías son perros, gatos y exóticos. Para cada categoría, he creado una página HTML que incluye una breve descripción de cómo
+trabajamos con cada especie. Es importante destacar que he ocultado el formulario de carga de datos de mascotas para que solo pueda accederse
+si los usuarios han iniciado sesión en el sitio web.
+
+En el caso de que un usuario cargue los datos de su mascota, les mostramos un mensaje indicando que nos pondremos en contacto con ellos a la
+brevedad para agendar una entrevista y que puedan conocer nuestras instalaciones.
+
+Enfocándome en mejorar la experiencia visual de la web, me dediqué a acomodar el diseño para lograr una apariencia atractiva y profesional.
+Además, he agregado imágenes en cada sección para hacerla más visualmente atractiva y facilitar la comprensión de los diferentes aspectos de nuestro servicio
+de guardería/hotel para mascotas.
+
+También he incluido botones estratégicamente ubicados en cada página para ofrecer una navegación cómoda y sencilla en nuestro sitio web.
+Estos botones permiten a los usuarios moverse fácilmente entre las diferentes secciones, como las categorías de perros, gatos y exóticos,
+y acceder rápidamente al formulario de carga de datos de mascotas cuando sea apropiado.
+

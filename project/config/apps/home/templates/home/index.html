@@ -4,7 +4,10 @@
 {% block contenido %}
 
 {% if user.is_authenticated %}
-        
+  <h3> Bienvenido {{user.username}}</h3>
+  {% if user.vendedor.avatar.url %}
+    <img src=""{{user.vendedor.aatar.url }} alt="">
+    {% endif%}
 {% endif%}
 
 {% if user.is_staff %}
