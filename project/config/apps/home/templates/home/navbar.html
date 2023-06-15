@@ -15,13 +15,13 @@
       <a class="nav-link" href="{% url 'home:agregar_exotico' %}">Exóticos</a>
     </li>
     {% if user.is_authenticated %}
-      <li class="nav-item">
-        <h3 class="d-flex align-items-center"> Bienvenido {{ user.username }}
-        {% if user.usuario.avatar.url %}
-          <img src="{{ user.usuario.avatar.url }}" alt="Avatar" style="height:30px;">
+      <h3 class="d-flex align-items-center"> Bienvenido {{ user.username }} 
+       {% if user.usuario.avatar.url %}
+        <li class="nav-item">
+           <img src="{{ avatar_url }}" alt="Avatar" style="height:30px;">
+        </li>
         {% endif %}
-        </h3>
-      </li>
+      </h3>
     {% endif %}
   </ul>
 </nav>

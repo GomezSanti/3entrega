@@ -1,27 +1,23 @@
 {% extends 'home/base.html' %}
-{%load static %}
+{% load static %}
 
 {% block contenido %}
 
 {% if user.is_authenticated %}
-  <h3 class="d-flex align-items-center"> Bienvenido {{user.username}}
-  {% if  user.usuario.avatar.url %}
+  <h3 class="d-flex align-items-center"> Bienvenido {{ user.username }}
+  {% if user.usuario.avatar.url %}
     <img src="{{ user.usuario.avatar.url }}" alt="Avatar" style="height:30px;">
-    {% endif%}
-  </h3>
-{% endif%}
+  {% endif %}
+</h3>
+{% endif %}
 
 {% if user.is_staff %}
+  <p><a href="{% url 'admin:index' %}" class="btn btn-primary">Administración</a></p>
+{% else %}
+  <a href="{% url 'home:login' %}" class="btn btn-primary">Iniciar sesión</a>
+{% endif %}
 
-    <p><a href="{% url 'admin:index' %}" class="btn btn-primary">Administración</a></p>
-        
-  {% else %}
-
-    <a href="{% url 'home:login' %}" class="btn btn-primary">Iniciar sesión</a>
-
-  {% endif %}
-
-  {% if messages %}
+{% if messages %}
   <ul class="messages">
     {% for message in messages %}
       <span class="message-content">{{ message }}</span>
@@ -29,8 +25,6 @@
   </ul>
 {% endif %}
 
-</div>
-</div>  
 <div class="image-container" style="text-align: center; margin-bottom: -0px;">
   <img src="{% static 'Web.png' %}" alt="Imagen" style="max-width: 100%; height: auto; margin: 0 auto;">
 </div>
