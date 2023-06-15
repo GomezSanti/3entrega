@@ -10,7 +10,12 @@ from .forms import UserRegisterForm
 
 
 def index(request):
-    return render(request, "home/index.html", {"user": request.user})
+    avatar_url = None
+    if request.user.is_authenticated:
+        usuario = request.user.usuario
+        if usuario.avatar:
+            avatar_url = usuario.avatar.url
+    return render(request, "home/index.html", {"user": request.user, "avatar_url": avatar_url})
 
 
 #Formulario de perros
